@@ -8,7 +8,7 @@ describe('Agibank Test', () => {
         BlogPage.visit();
     });
 
-    it('deve pesquisar conforme termo de pesquisa informado', () => {
+    it('should search according to the specified search term', () => {
       cy.fixture('testData.json').each((testdata) => {
         cy.log(testdata)
         BlogPage.search(testdata.search);
@@ -20,7 +20,7 @@ describe('Agibank Test', () => {
       });
     });
 
-    it('deve apresentar a mensagem informando que não foi retornado valor para a pesquisa informada', () => {
+    it('should display a message informing that no results were returned for the provided search term', () => {
       cy.fixture('testDataNegative.json').each((testdata) => {
         BlogPage.search(testdata.search);
         cy.get('.no-results').should(($element) => {
