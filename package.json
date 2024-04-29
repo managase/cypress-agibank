@@ -1,6 +1,7 @@
 {
   "scripts": {
-    "tests-search": "cypress run --spec 'cypress/e2e/blobPage.cy.js'"
+    "tests-search": "cypress run --spec 'cypress/e2e/blobPage.cy.js'",
+    "cy:open": "cypress open"
   },
   "devDependencies": {
     "cypress": "^13.8.1"
